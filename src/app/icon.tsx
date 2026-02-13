@@ -1,11 +1,11 @@
 import { ImageResponse } from 'next/og'
 import { CheckSquare } from 'lucide-react';
 
-export const runtime = 'edge'
+export const dynamic = "force-static";
 export const size = {
   width: 32,
   height: 32,
-}
+};
 
 export default function Icon() {
   return new ImageResponse(
@@ -20,7 +20,7 @@ export default function Icon() {
           alignItems: 'center',
           justifyContent: 'center',
           color: 'white',
-          borderRadius: '8px'
+          borderRadius: '8px',
         }}
       >
         <CheckSquare style={{ width: '20px', height: '20px' }}/>
@@ -29,5 +29,5 @@ export default function Icon() {
     {
       ...size,
     }
-  )
+  );
 }
